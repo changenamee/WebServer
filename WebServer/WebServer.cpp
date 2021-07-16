@@ -7,8 +7,7 @@
 
 WebServer::WebServer(int port, int trigMode, int timeoutMS, bool OptLinger,
                      int sqlPort, const char* sqlUser, const  char* sqlPwd,
-                     const char* dbName, int connPoolNum, int threadNum,
-                     bool openLog, int logLevel, int logQueSize):port(port),timeOutMS(timeoutMS),
+                     const char* dbName, int connPoolNum, int threadNum):port(port),timeOutMS(timeoutMS),
                      openLinger(OptLinger),isClosed(false),epoller_(new Epoller()),
                      threadPool(new ThreadPool(threadNum)),timer(new Timer())
 {
